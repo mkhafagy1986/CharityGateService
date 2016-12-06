@@ -15,7 +15,7 @@ namespace CharityGateService
             //MembershipCreateStatus userStatus;
             //Membership.CreateUser("OrangeUser", "OrangePass", "a@a.com", "what is your name?", "Orange", true, out userStatus);
 
-            //Membership.CreateUser("mostafa.khafagy", "BIP@ssw0rd", "a@a.com", "what is your name?", "mostafa", true, out userStatus);
+            //Membership.CreateUser("mostafa.khafagy", "BIP@ssw0rd", "a@a.com", "what is your name?", "mostafa"WE', true, out userStatus);
         }
     }
 }

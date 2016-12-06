@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegisterationSaveName.aspx.cs" Inherits="CharityGate.RegisterationSaveName" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegisterationSaveName.aspx.cs" Inherits="CharityGateService.RegisterationPages.RegisterationSaveName" %>
 
 <?xml version="1.0" encoding="UTF-8" ?>
 

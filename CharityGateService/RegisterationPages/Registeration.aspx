@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registeration.aspx.cs" Inherits="CharityGate.Registeration" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registeration.aspx.cs" Inherits="CharityGateService.RegisterationPages.Registeration" %>
 
 <?xml version="1.0" encoding="UTF-8" ?>
 
@@ -6,11 +6,9 @@
 <head>
 </head>
 <body>
-    التسجيل فى بوابة الخير<br />
-    برجاء إدخال الاسم:<br />
+     برجاء إدخال إسم المؤسسه:<br/>
     <form action="RegisterationSaveName.aspx">
-        <input type="text" name="response" />
+        <input type="text" name="response"/>
     </form>
 </body>
 </html>
-
