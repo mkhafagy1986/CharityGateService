@@ -47,6 +47,10 @@ namespace CharityGateService.DonationPages.Hospitals
 
             HospitalsFunctionallatyRepeater.DataSource = db.HospitalFunctionalities.ToList();
             HospitalsFunctionallatyRepeater.DataBind();
+
+            string UserSessionId = Request.Headers["User-SessionId"];
+            string UserMSISDN = Request.Headers["User-MSISDN"];
+            string UserTOKEN = Request.Headers["User-TOKEN"];
         }
     }
 }

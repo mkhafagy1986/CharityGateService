@@ -6,9 +6,10 @@
 <head>
 </head>
 <body>
-     <a href="Hospitals/Hospitals.aspx">المستشفيات</a><br/>
-     <a href="CharityInstitutions.aspx">مؤسسات خيرية</a><br/>
-     <a href="EducationalInstitutions.aspx">مؤسسات تعليمية</a><br/>
-     <a href="CharityAssociations.aspx">جمعيات خيرية</a><br/>
+     <asp:Repeater ID="OrganizationsRepeater" runat="server">
+        <ItemTemplate>
+            <a href='OrganizationItems.aspx?Id=<%# Eval("OrganizationId") %>'><%# Eval("OrganizationName") %></a><br />
+        </ItemTemplate>
+    </asp:Repeater>
 </body>
 </html>
