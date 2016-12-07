@@ -137,15 +137,12 @@
     <Content Include="DonationPages\CharityAssociations.aspx" />
     <Content Include="DonationPages\CharityInstitutions.aspx" />
     <Content Include="DonationPages\Donation.aspx" />
-    <Content Include="DonationPages\EducationalInstitutions.aspx" />
-    <Content Include="DonationPages\Hospitals\HospitalPaymentConfirmation.aspx" />
-    <Content Include="DonationPages\Hospitals\Hospitals.aspx" />
-    <Content Include="DonationPages\Hospitals\HospitalsServices.aspx" />
-    <Content Include="DonationPages\Hospitals\HospitalsServicesHandel.aspx" />
-    <Content Include="DonationPages\Hospitals\PayByMobileBalance.aspx" />
-    <Content Include="DonationPages\Hospitals\PayByMobileBalanceHandel.aspx" />
-    <Content Include="DonationPages\Hospitals\PayByOrangeWallet.aspx" />
-    <Content Include="DonationPages\Hospitals\PayByOrangeWalletHandel.aspx" />
+    <Content Include="DonationPages\OrganizationsItemsPaymentSelection.aspx" />
+    <Content Include="DonationPages\OrganizationItems.aspx" />
+    <Content Include="DonationPages\OrganizationsItemsFunctionalities.aspx" />
+    <Content Include="DonationPages\OrganizationsItemsServicesHandel.aspx" />
+    <Content Include="DonationPages\PaymentExcution.aspx" />
+    <Content Include="DonationPages\PaymentMethodHandel.aspx" />
     <Content Include="Global.asax" />
     <Content Include="RegisterationPages\Registeration.aspx" />
     <Content Include="RegisterationPages\RegisterationSaveContactNumber.aspx" />
@@ -228,68 +225,47 @@
     <Compile Include="DonationPages\Donation.aspx.designer.cs">
       <DependentUpon>Donation.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DonationPages\EducationalInstitutions.aspx.cs">
-      <DependentUpon>EducationalInstitutions.aspx</DependentUpon>
+    <Compile Include="DonationPages\OrganizationsItemsPaymentSelection.aspx.cs">
+      <DependentUpon>OrganizationsItemsPaymentSelection.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DonationPages\EducationalInstitutions.aspx.designer.cs">
-      <DependentUpon>EducationalInstitutions.aspx</DependentUpon>
+    <Compile Include="DonationPages\OrganizationsItemsPaymentSelection.aspx.designer.cs">
+      <DependentUpon>OrganizationsItemsPaymentSelection.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DonationPages\Hospitals\HospitalPaymentConfirmation.aspx.cs">
-      <DependentUpon>HospitalPaymentConfirmation.aspx</DependentUpon>
+    <Compile Include="DonationPages\OrganizationItems.aspx.cs">
+      <DependentUpon>OrganizationItems.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DonationPages\Hospitals\HospitalPaymentConfirmation.aspx.designer.cs">
-      <DependentUpon>HospitalPaymentConfirmation.aspx</DependentUpon>
+    <Compile Include="DonationPages\OrganizationItems.aspx.designer.cs">
+      <DependentUpon>OrganizationItems.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DonationPages\Hospitals\Hospitals.aspx.cs">
-      <DependentUpon>Hospitals.aspx</DependentUpon>
+    <Compile Include="DonationPages\OrganizationsItemsFunctionalities.aspx.cs">
+      <DependentUpon>OrganizationsItemsFunctionalities.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DonationPages\Hospitals\Hospitals.aspx.designer.cs">
-      <DependentUpon>Hospitals.aspx</DependentUpon>
+    <Compile Include="DonationPages\OrganizationsItemsFunctionalities.aspx.designer.cs">
+      <DependentUpon>OrganizationsItemsFunctionalities.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DonationPages\Hospitals\HospitalsServices.aspx.cs">
-      <DependentUpon>HospitalsServices.aspx</DependentUpon>
+    <Compile Include="DonationPages\OrganizationsItemsServicesHandel.aspx.cs">
+      <DependentUpon>OrganizationsItemsServicesHandel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DonationPages\Hospitals\HospitalsServices.aspx.designer.cs">
-      <DependentUpon>HospitalsServices.aspx</DependentUpon>
+    <Compile Include="DonationPages\OrganizationsItemsServicesHandel.aspx.designer.cs">
+      <DependentUpon>OrganizationsItemsServicesHandel.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DonationPages\Hospitals\HospitalsServicesHandel.aspx.cs">
-      <DependentUpon>HospitalsServicesHandel.aspx</DependentUpon>
+    <Compile Include="DonationPages\PaymentExcution.aspx.cs">
+      <DependentUpon>PaymentExcution.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DonationPages\Hospitals\HospitalsServicesHandel.aspx.designer.cs">
-      <DependentUpon>HospitalsServicesHandel.aspx</DependentUpon>
+    <Compile Include="DonationPages\PaymentExcution.aspx.designer.cs">
+      <DependentUpon>PaymentExcution.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DonationPages\Hospitals\PayByMobileBalance.aspx.cs">
-      <DependentUpon>PayByMobileBalance.aspx</DependentUpon>
+    <Compile Include="DonationPages\PaymentMethodHandel.aspx.cs">
+      <DependentUpon>PaymentMethodHandel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DonationPages\Hospitals\PayByMobileBalance.aspx.designer.cs">
-      <DependentUpon>PayByMobileBalance.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DonationPages\Hospitals\PayByMobileBalanceHandel.aspx.cs">
-      <DependentUpon>PayByMobileBalanceHandel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DonationPages\Hospitals\PayByMobileBalanceHandel.aspx.designer.cs">
-      <DependentUpon>PayByMobileBalanceHandel.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DonationPages\Hospitals\PayByOrangeWallet.aspx.cs">
-      <DependentUpon>PayByOrangeWallet.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DonationPages\Hospitals\PayByOrangeWallet.aspx.designer.cs">
-      <DependentUpon>PayByOrangeWallet.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DonationPages\Hospitals\PayByOrangeWalletHandel.aspx.cs">
-      <DependentUpon>PayByOrangeWalletHandel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DonationPages\Hospitals\PayByOrangeWalletHandel.aspx.designer.cs">
-      <DependentUpon>PayByOrangeWalletHandel.aspx</DependentUpon>
+    <Compile Include="DonationPages\PaymentMethodHandel.aspx.designer.cs">
+      <DependentUpon>PaymentMethodHandel.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
