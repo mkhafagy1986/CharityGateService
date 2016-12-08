@@ -13,6 +13,8 @@ namespace CharityGateServiceDAL
         }
 
         public virtual DbSet<Application> Applications { get; set; }
+        public virtual DbSet<ComplaintsTransaction> ComplaintsTransactions { get; set; }
+        public virtual DbSet<ComplaintsType> ComplaintsTypes { get; set; }
         public virtual DbSet<Membership> Memberships { get; set; }
         public virtual DbSet<OrganizationsFunctionality> OrganizationsFunctionalities { get; set; }
         public virtual DbSet<OrganizationsItem> OrganizationsItems { get; set; }
@@ -21,7 +23,9 @@ namespace CharityGateServiceDAL
         public virtual DbSet<PaymentTransaction> PaymentTransactions { get; set; }
         public virtual DbSet<PaymentType> PaymentTypes { get; set; }
         public virtual DbSet<Profile> Profiles { get; set; }
+        public virtual DbSet<RegistrationTransaction> RegistrationTransactions { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<ServiceFunctionality> ServiceFunctionalities { get; set; }
         public virtual DbSet<Transaction> Transactions { get; set; }
         public virtual DbSet<User> Users { get; set; }
 

@@ -6,7 +6,15 @@
 <head>
 </head>
 <body>
-     برجاء إدخال إسم المؤسسه:<br/>
+    <% if (System.Configuration.ConfigurationManager.AppSettings["Language"] == "Arabic") %>
+    <% { %>
+        برجاء إدخال إسم المؤسسه:<br/>
+    <% } %>
+    <% else if (System.Configuration.ConfigurationManager.AppSettings["Language"] == "English")%>
+    <% { %>
+        Please enter your organization name: <br/>
+    <% } %>
+     
     <form action="RegisterationSaveName.aspx">
         <input type="text" name="response"/>
     </form>

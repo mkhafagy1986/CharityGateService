@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharityGateServiceDAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ namespace CharityGateService.ComplaintPages
 {
     public partial class ComplainHandel : System.Web.UI.Page
     {
+        CharityGateServiceModel db = new CharityGateServiceModel();
         private string _CustomerContactNumber = "";
         public string CustomerContactNumber
         {
@@ -31,7 +33,14 @@ namespace CharityGateService.ComplaintPages
             string UserMSISDN = Request.Headers["User-MSISDN"];
             string UserTOKEN = Request.Headers["User-TOKEN"];
 
-            //save the customer contact number with the custometr transactions
+            var transactionobject = db.ComplaintsTransactions.Where(transaction => (transaction.UserSessionId == UserSessionId) 
+                && (transaction.UserMSISDN == UserMSISDN) 
+                && (transaction.UserTOKEN == UserTOKEN)).ToList().First();
+
+            transactionobject.ComplainantContactNumber = _CustomerContactNumber;
+
+            db.ComplaintsTransactions.AddOrUpdate(transactionobject);
+            db.SaveChanges();
         }
     }
 }

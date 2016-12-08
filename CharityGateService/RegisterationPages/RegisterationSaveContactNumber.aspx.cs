@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharityGateServiceDAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ namespace CharityGateService.RegisterationPages
 {
     public partial class RegisterationSaveContactNumber : System.Web.UI.Page
     {
+        CharityGateServiceModel db = new CharityGateServiceModel();
         private string _RegistrationNumber = "";
         public string RegistrationNumber
         {
@@ -31,6 +33,14 @@ namespace CharityGateService.RegisterationPages
             string UserMSISDN = Request.Headers["User-MSISDN"];
             string UserTOKEN = Request.Headers["User-TOKEN"];
 
+            var transactionobject = db.RegistrationTransactions.Where(transaction => (transaction.UserSessionId == UserSessionId)
+               && (transaction.UserMSISDN == UserMSISDN)
+               && (transaction.UserTOKEN == UserTOKEN)).ToList().First();
+
+            transactionobject.OrganizationContactNumber = _RegistrationNumber;
+
+            db.ComplaintsTransactions.AddOrUpdate(transactionobject);
+            db.SaveChanges();
             //update the registration record that saved before
         }
     }

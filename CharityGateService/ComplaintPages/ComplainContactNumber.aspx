@@ -4,12 +4,20 @@
 
 <html>
 <head>
-    <meta name="nav" content="end"/>
+    <meta name="nav" content="end" />
 </head>
 <body>
-   برجاء ادخال رقم التواصل <br/>
+    <% if (System.Configuration.ConfigurationManager.AppSettings["Language"] == "Arabic") %>
+    <% { %>
+        برجاء ادخال رقم التواصل.<br />
+    <% } %>
+    <% else if (System.Configuration.ConfigurationManager.AppSettings["Language"] == "English")%>
+    <% { %>
+        Please enter the number of communication.<br />
+    <% } %>
+
     <form action="ComplainHandel.aspx">
-        <input type="text" name="response"/>
+        <input type="text" name="response" />
     </form>
 </body>
 </html>

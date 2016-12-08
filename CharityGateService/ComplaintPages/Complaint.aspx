@@ -8,7 +8,17 @@
 <head>
 </head>
 <body>
-    <a href="ComplainContactNumber.aspx?complaintype=1">شكوى بخصوص الخدمه</a><br/>
-    <a href="ComplainContactNumber.aspx?complaintype=2">شكوى بخصوص التبرع</a><br/>
+    <asp:Repeater ID="SerComplaintTypeRepeater" runat="server">
+        <ItemTemplate>
+            <% if(System.Configuration.ConfigurationManager.AppSettings["Language"] == "Arabic") %>
+            <% { %>
+                <a href='ComplainContactNumber.aspx?complaintype=<%# Eval("ComplaintTypeId") %>'><%# Eval("ComplaintTypeArabicName") %></a><br />
+            <% } %>
+            <% else if(System.Configuration.ConfigurationManager.AppSettings["Language"] == "English")%>
+            <% { %>
+                <a href='ComplainContactNumber.aspx?complaintype=<%# Eval("ComplaintTypeId") %>'><%# Eval("ComplaintTypeEnglishName") %></a><br />
+            <% } %>
+        </ItemTemplate>
+    </asp:Repeater>
 </body>
 </html>

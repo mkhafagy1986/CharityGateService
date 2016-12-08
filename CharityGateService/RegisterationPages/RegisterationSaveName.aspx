@@ -6,7 +6,14 @@
 <head>
 </head>
 <body>
-    برجاء ادخال رقم التواصل:<br />
+    <% if (System.Configuration.ConfigurationManager.AppSettings["Language"] == "Arabic") %>
+    <% { %>
+        برجاء ادخال رقم التواصل:<br />
+    <% } %>
+    <% else if (System.Configuration.ConfigurationManager.AppSettings["Language"] == "English")%>
+    <% { %>
+        Please enter the contact number: <br />
+    <% } %>
     <form action="RegisterationSaveContactNumber.aspx">
         <input type="text" name="response" />
     </form>

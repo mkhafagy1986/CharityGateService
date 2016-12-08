@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharityGateServiceDAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +10,11 @@ namespace CharityGateService.ComplaintPages
 {
     public partial class Complaint : System.Web.UI.Page
     {
+        CharityGateServiceModel db = new CharityGateServiceModel();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            SerComplaintTypeRepeater.DataSource = db.ComplaintsTypes.ToList();
+            SerComplaintTypeRepeater.DataBind();
         }
     }
 }

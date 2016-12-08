@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharityGateServiceDAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ namespace CharityGateService.RegisterationPages
 {
     public partial class RegisterationSaveName : System.Web.UI.Page
     {
+        CharityGateServiceModel db = new CharityGateServiceModel();
         private string _RegistrationName = "";
         public string HospitalId
         {
@@ -31,6 +33,18 @@ namespace CharityGateService.RegisterationPages
             string UserMSISDN = Request.Headers["User-MSISDN"];
             string UserTOKEN = Request.Headers["User-TOKEN"];
 
+            var transactionobject = new RegistrationTransaction()
+            {
+                UserSessionId = UserSessionId,
+                UserMSISDN = UserMSISDN,
+                UserTOKEN = UserTOKEN,
+                OrganizationContactNumber = "",
+                OrganizationName = _RegistrationName,
+                TransactionDate = DateTime.Now
+            };
+
+            db.RegistrationTransactions.AddOrUpdate(transactionobject);
+            db.SaveChanges();
             //save it to data base
         }
     }

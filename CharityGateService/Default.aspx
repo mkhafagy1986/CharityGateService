@@ -6,9 +6,18 @@
 <head>
 </head>
 <body>
-    <a href="DonationPages/Donation.aspx">التبرع</a><br />
-    <a href="RegisterationPages/Registeration.aspx">الأشتراك فى الخدمة (المؤسسات الخيرية)</a><br />
-    <a href="ComplaintPages/Complaint.aspx">إرسال شكاوي</a><br />
+     <asp:Repeater ID="ServiceFunctionalitiesRepeater" runat="server">
+        <ItemTemplate>
+            <% if(System.Configuration.ConfigurationManager.AppSettings["Language"] == "Arabic") %>
+            <% { %>
+                <a href='<%# Eval("ServicePageURL") %>'><%# Eval("ServiceFunctionalityArabicName") %></a><br />
+            <% } %>
+            <% else if(System.Configuration.ConfigurationManager.AppSettings["Language"] == "English")%>
+            <% { %>
+                <a href='<%# Eval("ServicePageURL") %>'><%# Eval("ServiceFunctionalityEnglishName") %></a><br />
+            <% } %>
+        </ItemTemplate>
+    </asp:Repeater>
 </body>
 </html>
 

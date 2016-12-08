@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharityGateServiceDAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,8 +11,12 @@ namespace CharityGateService
 {
     public partial class Default : System.Web.UI.Page
     {
+        CharityGateServiceModel db = new CharityGateServiceModel();
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            ServiceFunctionalitiesRepeater.DataSource = db.ServiceFunctionalities.ToList();
+            ServiceFunctionalitiesRepeater.DataBind();
             //MembershipCreateStatus userStatus;
             //Membership.CreateUser("OrangeUser", "OrangePass", "a@a.com", "what is your name?", "Orange", true, out userStatus);
 
