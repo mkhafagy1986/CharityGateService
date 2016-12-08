@@ -1,6 +1,7 @@
 ﻿using CharityGateServiceDAL;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -39,7 +40,7 @@ namespace CharityGateService.RegisterationPages
 
             transactionobject.OrganizationContactNumber = _RegistrationNumber;
 
-            db.ComplaintsTransactions.AddOrUpdate(transactionobject);
+            db.RegistrationTransactions.AddOrUpdate(transactionobject);
             db.SaveChanges();
             //update the registration record that saved before
         }

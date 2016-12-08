@@ -14,6 +14,7 @@ namespace CharityGateServiceDAL
         [StringLength(500)]
         public string PaymentStatusText { get; set; }
     }
+
     public enum PaymentStatusEnum
     {
         Initiated = 1,
