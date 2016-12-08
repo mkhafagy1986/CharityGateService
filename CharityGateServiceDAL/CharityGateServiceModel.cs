@@ -19,7 +19,7 @@ namespace CharityGateServiceDAL
         public virtual DbSet<OrganizationsFunctionality> OrganizationsFunctionalities { get; set; }
         public virtual DbSet<OrganizationsItem> OrganizationsItems { get; set; }
         public virtual DbSet<OrganizationsType> OrganizationsTypes { get; set; }
-        public virtual DbSet<PaymentStatu> PaymentStatus { get; set; }
+        public virtual DbSet<PaymentStatus> PaymentStatus { get; set; }
         public virtual DbSet<PaymentTransaction> PaymentTransactions { get; set; }
         public virtual DbSet<PaymentType> PaymentTypes { get; set; }
         public virtual DbSet<Profile> Profiles { get; set; }

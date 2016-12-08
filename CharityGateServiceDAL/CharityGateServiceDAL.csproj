@@ -58,7 +58,7 @@
     <Compile Include="OrganizationsFunctionality.cs" />
     <Compile Include="OrganizationsItem.cs" />
     <Compile Include="OrganizationsType.cs" />
-    <Compile Include="PaymentStatu.cs" />
+    <Compile Include="PaymentStatus.cs" />
     <Compile Include="PaymentTransaction.cs" />
     <Compile Include="PaymentType.cs" />
     <Compile Include="Profile.cs" />

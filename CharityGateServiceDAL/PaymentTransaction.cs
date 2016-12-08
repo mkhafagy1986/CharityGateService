@@ -20,10 +20,4 @@ namespace CharityGateServiceDAL
 
         public int? PaymentStatus { get; set; }
     }
-    public enum PaymentStatusEnum
-    {
-        Initiated = 1,
-        Pending = 2,
-        Accepted = 3
-    }
 }
