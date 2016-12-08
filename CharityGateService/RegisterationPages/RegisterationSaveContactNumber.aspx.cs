@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.Entity.Migrations;
 
 namespace CharityGateService.RegisterationPages
 {
@@ -39,7 +40,7 @@ namespace CharityGateService.RegisterationPages
 
             transactionobject.OrganizationContactNumber = _RegistrationNumber;
 
-            db.ComplaintsTransactions.AddOrUpdate(transactionobject);
+            db.RegistrationTransactions.AddOrUpdate(transactionobject);
             db.SaveChanges();
             //update the registration record that saved before
         }
